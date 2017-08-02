@@ -1,0 +1,44 @@
+/*-------------------------------------------------------------------
+ * Title : Dashboard
+ * Description: A dashboard-like user list CSS theme for Myanimelist
+ *
+ * I try to organaize the code according to SMACSS recommendation,
+ * despite i can't touch the HTML file.
+ * A bloc rules must be organized by categories in this order :
+ *    Box properties (width, height, margin, etc...)
+ *    Border properties
+ *    Background properties
+ *    Text properties
+ *    Other elements properties
+ ------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------
+ * Bases
+ * (Commons rules for all p elements, div, h1, etc...)
+ ------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+ * Layout
+ * 
+ * Position of header, footer, sidebar, etc... It's concern size and
+ * position properties
+ ------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+ * Module
+ *
+ * Specific elements like button, tab, etc
+ ------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+ * States
+ *
+ * Elements that will be hidden, etc
+ *-----------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+ * Theme
+ *
+ * Colors and apparence properties
+ *-----------------------------------------------------------------*/
