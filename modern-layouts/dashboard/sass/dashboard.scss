@@ -1,44 +1,70 @@
-/*-------------------------------------------------------------------
- * Title : Dashboard
- * Description: A dashboard-like user list CSS theme for Myanimelist
- *
- * I try to organaize the code according to SMACSS recommendation,
- * despite i can't touch the HTML file.
- * A bloc rules must be organized by categories in this order :
- *    Box properties (width, height, margin, etc...)
- *    Border properties
- *    Background properties
- *    Text properties
- *    Other elements properties
- ------------------------------------------------------------------*/
+//-------------------------------------------------------------------
+// Title : Dashboard
+// Description: A dashboard-like user list CSS theme for Myanimelist
+//
+// I try to organaize the code according to SMACSS recommendation,
+// despite i can't touch the HTML file.
+// A bloc rules must be organized by categories in this order :
+//
+//     body {
+//            /* Box properties */
+//
+//            /* Border */
+//
+//            /* Background */
+//
+//            /* Text */
+//
+//            /* Other */
+//        }
+//------------------------------------------------------------------
 
 
-/*-----------------------------------------------------------------
+@import "variables";
+@import "functions";
+
+/*
  * Bases
- * (Commons rules for all p elements, div, h1, etc...)
- ------------------------------------------------------------------*/
+ ==================================================================*/
 
-/*-------------------------------------------------------------------
+//
+// (Commons rules for all p elements, div, h1, etc...)
+//
+
+@import "base";
+
+/**
  * Layout
- * 
- * Position of header, footer, sidebar, etc... It's concern size and
- * position properties
- ------------------------------------------------------------------*/
+ ==================================================================*/
 
-/*-------------------------------------------------------------------
+//
+// Position of header, footer, sidebar, etc... It's concern size and
+// position properties
+//
+
+//@import "layout";
+
+/**
  * Module
- *
- * Specific elements like button, tab, etc
- ------------------------------------------------------------------*/
+ ==================================================================*/
 
-/*-------------------------------------------------------------------
+//
+// Specific elements like button, tab, etc
+//
+
+/**
  * States
- *
- * Elements that will be hidden, etc
- *-----------------------------------------------------------------*/
+ ==================================================================*/
 
-/*-------------------------------------------------------------------
+//
+// Elements that will be hidden, etc
+//
+
+/**
  * Theme
- *
- * Colors and apparence properties
- *-----------------------------------------------------------------*/
+ ==================================================================*/
+
+//
+// Colors and apparence properties
+//
+

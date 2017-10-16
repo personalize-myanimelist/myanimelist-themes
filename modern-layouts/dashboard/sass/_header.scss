@@ -1,0 +1,18 @@
+@import "variables";
+
+.header {
+	position: fixed;
+	width: 25%;
+}
+
+.header {
+	.header-menu,
+	.header-title {
+		display: block;
+		background-color: $watching-color;
+	}
+	
+	.header-menu:nth-child() {
+		display: inline-block;
+	}
+}

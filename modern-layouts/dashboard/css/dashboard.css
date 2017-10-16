@@ -1,40 +1,279 @@
-/*-------------------------------------------------------------------
- * Title : Dashboard
- * Description: A dashboard-like user list CSS theme for Myanimelist
- *
- * I try to organaize the code according to SMACSS recommendation,
- * despite i can't touch the HTML file.
- * A bloc rules must be organized by categories in this order :
- *    Box properties (width, height, margin, etc...)
- *    Border properties
- *    Background properties
- *    Text properties
- *    Other elements properties
- ------------------------------------------------------------------*/
-/*-----------------------------------------------------------------
+@charset "UTF-8";
+/*
  * Bases
- * (Commons rules for all p elements, div, h1, etc...)
- ------------------------------------------------------------------*/
-/*-------------------------------------------------------------------
+ ==================================================================*/
+/*
+* Général
+=============================================*/
+/* line 11, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+body {
+  background: #ECECEC !important;
+  font-size: 12px;
+}
+
+/* line 16, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.header,
+.list-menu-float,
+.list-container,
+footer {
+  display: block;
+}
+
+/*
+* Header
+=============================================*/
+/* line 27, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.header {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  top: 0px;
+  left: 70px;
+  margin: 0 auto;
+  padding: 0 20px;
+  background: #1976D2;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  z-index: 3;
+}
+
+/* line 40, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.header .header-menu {
+  position: absolute;
+  top: 25px;
+  right: 125px;
+}
+
+/*
+* Menu
+=============================================*/
+/* line 50, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.list-menu-float {
+  position: fixed;
+  /*height: 100vh;*/
+  height: 100%;
+  width: 70px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  background: #FFFFFF !important;
+  z-index: 3;
+}
+
+/* line 65, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.list-menu-float .icon-menu {
+  background-color: #FFFFFF !important;
+  width: 70px;
+  height: 70px;
+}
+
+/* line 71, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.list-menu-float .icon-menu.quick-add svg.icon-quick-add,
+.list-menu-float .icon-menu.anime-list svg.icon-anime-list,
+.list-menu-float .icon-menu.manga-list svg.icon-manga-list,
+.list-menu-float .icon-menu.history svg.icon-history,
+.list-menu-float .icon-menu.export svg.icon-export,
+.list-menu-float .icon-menu.logout svg.icon-logout,
+.list-menu-float .icon-menu.setting svg.icon-setting {
+  left: 20px;
+  top: 20px;
+  width: 2rem;
+  height: 2rem;
+}
+
+/* line 84, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.list-menu-float .icon-menu svg.icon {
+  fill: #777777;
+}
+
+/* line 88, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.list-menu-float .icon-menu:hover svg.icon {
+  fill: #03A9F4;
+}
+
+/* line 92, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.list-menu-float .icon-menu .text {
+  position: absolute;
+  top: 24px;
+  left: 75px;
+  width: 0;
+  display: inline-block;
+  color: #03A9F4;
+}
+
+/* line 101, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.list-menu-float .icon-menu.history .text,
+.list-menu-float .icon-menu.export .text,
+.list-menu-float .icon-menu .text {
+  left: 60px;
+}
+
+/* line 107, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.list-menu-float .icon-menu:hover:not(.profile) {
+  width: 200px;
+}
+
+/* line 111, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.list-menu-float .icon-menu.setting:hover .text {
+  width: 140px;
+}
+
+/* line 115, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.list-menu-float .icon-menu.setting:hover .text .link-list-setting,
+.list-menu-float .icon-menu.setting:hover .text .link-style-setting {
+  position: absolute;
+  background-color: #FFFFFF;
+  display: block;
+  width: 100%;
+  height: 50px;
+  text-align: left;
+  padding-left: 25px;
+  color: #777777;
+}
+
+/* line 127, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.list-menu-float .icon-menu.setting .text .link-list-setting:hover,
+.list-menu-float .icon-menu.setting .text .link-style-setting:hover {
+  color: #03A9F4;
+}
+
+/* line 132, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.list-menu-float .icon-menu.setting:hover .text .link-style-setting {
+  border-top: #03A9F4 1px solid;
+}
+
+/*
+* List
+=============================================*/
+/* line 142, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.list-container {
+  position: relative;
+  width: 91%;
+  margin: 100px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border: none;
+  background: #ECECEC !important;
+}
+
+/* line 152, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.cover-block {
+  max-width: 1284px;
+  width: 100%;
+  margin: auto;
+  background: #transparent;
+}
+
+/* line 159, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.cover-block .image-container {
+  display: block;
+  width: 100%;
+  padding-top: 0px;
+}
+
+/* line 165, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+[src="https://myanimelist.cdn-dena.com/s/common/uploaded_files/1455542413-6b19ce62d01ef05368166ff6db661484.png"] {
+  background-color: #1976D2 !important;
+}
+
+/* line 169, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.cover-block .image-container .btn-list-setting:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 8px;
+  border: none;
+  box-shadow: 0 0 4px #000000;
+  font-size: 1.5em;
+  color: #FFFFFF;
+}
+
+/* line 178, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.status-menu-container {
+  display: block;
+  width: 100%;
+  margin: 0;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background-color: #FFFFFF;
+}
+
+/* line 187, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.status-menu-container .search-container #search-button {
+  margin-top: 10px;
+  font-size: 2em;
+}
+
+/* line 192, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.list-unit,
+.list-unit .list-status-title {
+  width: 100%;
+}
+
+/* line 197, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.list-unit .list-status-title .text {
+  color: #FFFFFF;
+}
+
+/* line 201, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.list-status-title {
+  background-color: #1976D2 !important;
+  /* #2196F3 #1976D2  #1F77B4*/
+}
+
+/* line 205, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.list-table .list-table-header .header-title {
+  background: #FFFFFF;
+  border-bottom: 2px solid;
+}
+
+/* line 210, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.list-table .list-table-data .data.title .link,
+.list-table .list-table-data .data a {
+  color: #1976D2 !important;
+}
+
+/* line 215, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+.status-menu-container .search-container #search-button:hover,
+.status-menu-container .status-menu .status-button:hover,
+.list-table .list-table-header .header-title .link.sort:hover,
+.list-table .list-table-data a:hover:not(.edit-disabled) {
+  color: #03A9F4 !important;
+}
+
+/*
+* Footer
+=============================================*/
+/* line 226, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+footer {
+  position: relative;
+  width: auto;
+}
+
+/* line 231, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+#footer-block {
+  padding: 0;
+  background-color: transparent;
+  font-family: sans-serif;
+}
+
+/* line 237, /var/www/git/myanimelist-themes/modern-layouts/dashboard/sass/_base.scss */
+#copyright {
+  font-size: 0.8rem;
+  color: #777777;
+  margin: 10px;
+  text-align: center;
+}
+
+/**
  * Layout
- * 
- * Position of header, footer, sidebar, etc... It's concern size and
- * position properties
- ------------------------------------------------------------------*/
-/*-------------------------------------------------------------------
+ ==================================================================*/
+/**
  * Module
- *
- * Specific elements like button, tab, etc
- ------------------------------------------------------------------*/
-/*-------------------------------------------------------------------
+ ==================================================================*/
+/**
  * States
- *
- * Elements that will be hidden, etc
- *-----------------------------------------------------------------*/
-/*-------------------------------------------------------------------
+ ==================================================================*/
+/**
  * Theme
- *
- * Colors and apparence properties
- *-----------------------------------------------------------------*/
+ ==================================================================*/
 
 /*# sourceMappingURL=../css/dashboard.map */
