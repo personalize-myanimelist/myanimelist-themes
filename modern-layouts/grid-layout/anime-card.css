@@ -1,0 +1,69 @@
+.header, .list-menu-float, footer, .cover-block, .status-menu-container,.list-status-title {display: none !important;}
+
+.list-block .list-unit .list-table .status, 
+.list-block .list-unit .list-table .number, 
+.list-block .list-unit .list-table .priority, 
+.list-block .list-unit .list-table .studio, 
+.list-block .list-unit .list-table .licensor,
+.list-block .list-unit .list-table .rated,
+.list-block .list-unit .list-table .started, 
+.list-block .list-unit .list-table .finished,
+.list-block .list-unit .list-table .days,
+.list-block .list-unit .list-table .airing-started, 
+.list-block .list-unit .list-table .airing-finished, 
+.list-block .list-unit .list-table .storage, 
+.list-block .list-unit .list-table .tags, 
+.list-block .list-unit .list-table .season, 
+.icon-watch {
+  display: none !important;
+}
+
+.list-block .list-unit .list-table {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.list-block .list-unit .list-table-data {
+  display: grid;
+  grid-template-columns: [col-start] 6rem [col1] 300px [col-end];
+  grid-template-rows: [row-start] auto auto auto auto [row-end];
+  grid-template-areas: 
+    "image title"
+    "image type"
+    "image progress"
+    "image score";
+}
+
+.list-block .list-unit tbody:first-of-type {
+  flex: -webkit-available;
+  flex: -moz-available;
+  flex: available;
+}
+
+.list-block .list-unit .list-table .image {
+  grid-area: image;
+  padding: 0;
+}
+
+img.hover-info.image {
+  width: 6rem !important;
+  height: auto !important;
+  border: none;
+}
+
+.list-block .list-unit .list-table .title {
+  grid-area: title;
+}
+
+.list-block .list-unit .list-table .type {
+  grid-area: type;
+}
+
+.list-block .list-unit .list-table .score {
+  grid-area: score;
+}
+
+.list-block .list-unit .list-table .progress {
+  grid-area: progress;
+}
