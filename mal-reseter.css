@@ -1,0 +1,257 @@
+/* MAL CSS RESETER */
+
+
+body.ownlist,
+/*
+#advanced-options,
+#advanced-options .advanced-options-header,
+#advanced-options .advanced-options-header .description,
+#advanced-options select,
+#advanced-options select::-ms-expand,
+#advanced-options select:disabled,
+#advanced-options input[type=text],
+#advanced-options input:focus,
+*/
+
+/* sort */
+/*
+#advanced-options .sort-widget,
+#advanced-options .sort-widget:last-of-type,
+#advanced-options .sort-widget select,
+#advanced-options .sort-widget input[type=radio],
+#advanced-options .sort-widget input[type=radio] + label,
+#advanced-options .sort-widget input[type=radio]:checked + label,
+#advanced-options .sort-widget input[type=radio]:disabled + label,
+#advanced-options .sort-widget input[type=radio]:checked:disabled + label,
+*/
+
+/* filter */
+/*
+#advanced-options .filter-widget,
+#advanced-options .filter-widget select,
+#advanced-options .filter-widget.title input[type=text],
+#advanced-options .filter-widget.airing-status select,
+#advanced-options .filter-widget.publishing-status select,
+#advanced-options .filter-widget.producer select,
+#advanced-options .filter-widget.magazine select,
+#advanced-options .filter-widget.aired-date select.year,
+#advanced-options .filter-widget.published-date select.year,
+#advanced-options .filter-widget.aired-date select.month,
+#advanced-options .filter-widget.published-date select.month,
+#advanced-options .filter-widget.aired-date select.day,
+#advanced-options .filter-widget.published-date select.day,
+#advanced-options .filter-widget.aired-date .text,
+#advanced-options .filter-widget.published-date .text,
+#advanced-options .filter-widget.aired-season select.year,
+#dvanced-options .filter-widget.aired-season select.season,
+#advanced-options .sort-widget .widget-header,
+#advanced-options .filter-widget .widget-header,
+#advanced-options .sort-widget:last-of-type,
+#advanced-options .filter-widget:last-of-type,
+#advanced-options .advanced-options-button,
+#advanced-options .btn-apply,
+#advanced-options .btn-clear,
+#advanced-options .btn-apply:hover,
+#advanced-options .btn-clear:hover,
+*/
+
+/**
+ * General Styles
+ */
+
+body,
+td,
+a,
+#footer-block,
+#copyright,
+
+
+/*
+ * Header
+ */
+.header a,
+.header a:hover,
+.header,
+.header .header-title,
+.header .header-menu,
+.header .header-menu.other,
+.header .header-menu .btn-menu,
+.header .header-menu .header-info,
+.header .username,
+.header .header-menu .list-menu,
+.header .header-menu .list-menu .icon-menu,
+.header .header-menu .list-menu .icon-menu:hover,
+.header .header-menu .list-menu .icon-menu svg.icon,
+.header .header-menu .list-menu .icon-menu .text,
+
+/**
+ * Floating Menu
+ */
+.list-menu-float,
+.list-menu-float .icon-menu,
+
+/* SVG */
+.list-menu-float .icon-menu svg.icon,
+.list-menu-float .icon-menu:hover svg.icon,
+.list-menu-float .icon-menu.profile,
+.list-menu-float .icon-menu.quick-add,
+.list-menu-float .icon-menu.quick-add svg.icon-quick-add,
+.list-menu-float .icon-menu.anime-list,
+.list-menu-float .icon-menu.anime-list svg.icon-anime-list,
+.list-menu-float .icon-menu.manga-list,
+.list-menu-float .icon-menu.manga-list svg.icon-manga-list,
+.list-menu-float .icon-menu.history,
+.list-menu-float .icon-menu.history svg.icon-history,
+.list-menu-float .icon-menu.export,
+.list-menu-float .icon-menu.export svg.icon-export,
+.list-menu-float .icon-menu.login,
+.list-menu-float .icon-menu.login svg.icon-login,
+.list-menu-float .icon-menu.logout,
+.list-menu-float .icon-menu.logout svg.icon-logout,
+.list-menu-float .icon-menu.setting,
+.list-menu-float .icon-menu.setting svg.icon-setting,
+.list-menu-float .icon-menu .text,
+.list-menu-float .icon-menu:not(.profile):hover,
+.list-menu-float .icon-menu:hover .text,
+
+/* setting */
+.list-menu-float .icon-menu.setting .text,
+.list-menu-float .icon-menu.setting:hover .text,
+.list-menu-float .icon-menu.setting .text .link-list-setting,
+.list-menu-float .icon-menu.setting .text .link-style-setting,
+.list-menu-float .icon-menu.setting:hover .text .link-list-setting,
+.list-menu-float .icon-menu.setting:hover .text .link-style-setting,
+.list-menu-float .icon-menu.setting:hover .text .link-list-setting,
+.list-menu-float .icon-menu.setting:hover .text .link-style-setting,
+
+
+/**
+ * List Container
+ */
+
+.list-container,
+
+/**
+ * List Container - Cover Block
+ */
+.cover-block,
+.cover-block .image-container,
+.cover-block .image-container.hide,
+.cover-block .image-container img,
+
+/* setting icon */
+.cover-block .image-container .btn-list-setting,
+.cover-block .image-container:hover .btn-list-setting,
+.cover-block .image-container .btn-list-setting:hover,
+.cover-block .image-container .btn-list-setting .fa-camera,
+.cover-block .image-container .btn-list-setting .icon-plus-circle,
+.cover-block .image-container .btn-list-setting .text,
+.cover-block .image-container .btn-list-setting:hover .text,
+
+/**
+ * List Container - Status Menu
+ */
+.status-menu-container,
+.status-menu-container.fixed,
+.status-menu-container.fixed + div.list-block,
+.status-menu-container .status-menu,
+.status-menu-container .status-menu .status-button,
+.status-menu-container .status-menu .status-button.on,
+.status-menu-container .status-menu .status-button:after,
+.status-menu-container .status-menu .status-button.on:after, .status-menu .status-button:hover:after,
+
+/**
+ * List Container - Status Menu - Search
+ */
+.status-menu-container .search-container,
+.status-menu-container .search-container #search-button,
+.status-menu-container .search-container #search-box,
+.status-menu-container .search-container #search-box.open,
+.status-menu-container .search-container #search-box input,
+
+/**
+ * List Container - List Block
+ */
+.list-block,
+.list-unit,
+
+/**
+ * List Container - List Status Title (with Stats)
+ */
+.list-unit .list-status-title,
+.list-unit .list-status-title .text,
+.list-unit .list-status-title .stats,
+.list-unit .list-status-title .stats a,
+.list-unit .list-status-title .stats a.filterd,
+.list-unit .list-stats,
+
+
+/**
+ * List Container - List Table
+ */
+
+.list-table,
+.list-table > tbody:nth-of-type(2n+1),
+
+
+/**
+ * List Container - List Table - Header
+ */
+
+.list-table .list-table-header .header-title,
+.list-table .list-table-header .header-title:last-child,
+.list-table .list-table-header .header-title.status,
+.list-table .list-table-header .header-title.number,
+.list-table .list-table-header .header-title.image,
+.list-table .list-table-header .header-title.title,
+.list-table .list-table-header .header-title.score,
+.list-table .list-table-header .header-title.type,
+.list-table .list-table-header .header-title.progress,
+.list-table .list-table-header .header-title.chapters,
+.list-table .list-table-header .header-title.volumes,
+.list-table .list-table-header .header-title.tags,
+.list-table .list-table-header .header-title.rated,
+.list-table .list-table-header .header-title.started,
+.list-table .list-table-header .header-title.finished,
+.list-table .list-table-header .header-title.days,
+.list-table .list-table-header .header-title.storage,
+.list-table .list-table-header .header-title.retail,
+.list-table .list-table-header .header-title.priority,
+.list-table .list-table-header .header-title .link,
+.list-table .list-table-header .header-title .link.sort,
+.list-table .list-table-header .header-title .link.sort:hover,
+.list-table .list-table-header .header-title .sort-icon,
+
+
+/**
+ * List Container - List Table - Items
+ */
+
+.list-table .list-table-data .data,
+.list-table .list-table-data a:not(.edit-disabled):hover,
+.list-table .list-table-data a.edit-disabled,
+.list-table .list-table-data .tags .edit,
+.list-table .list-table-data .tags .edit:hover,
+.list-table .list-table-data .tags textarea,
+.list-table .list-table-data .data.image a,
+.list-table .list-table-data .data.image .image,
+.list-table .list-table-data .data.title,
+.list-table .list-table-data .data.title .link,
+.list-table .list-table-data .data.title .rewatching, .list-table .list-table-data .data.title .rereading, .list-table .list-table-data .data.title .content-status,
+.list-table .list-table-data .data.score .link,
+.list-table .list-table-data .data.title .add-edit-more,
+.list-table .list-table-data .data.title .more,
+.list-table .more-info,
+.list-table .more-info .more-content,
+.list-table .list-table-data .data.tags,
+.list-table .list-table-data .data.status,
+.list-table .list-table-data .data.status .text,
+.list-table .list-table-data .data.status.reading, .list-table .list-table-data .data.status.watching,
+.list-table .list-table-data .data.status.plantoread, .list-table .list-table-data .data.status.plantowatch,
+.list-table .list-table-data .data.status.completed,
+.list-table .list-table-data .data.status.onhold,
+.list-table .list-table-data .data.status.dropped,
+.list-table .list-table-data .data.title,
+.list-unit .loading-space {
+    all: initial;
+}
