@@ -1,3 +1,10 @@
+/*
+* 
+* Description : theme commission for mucos about the manga Barakamon
+* Version : 0.1
+* Credits : Some svg icon was generated from www.flaticon.com
+*/
+
 @font-face{ 
 	font-family: 'Chikara';
 	src: url('https://dl.dropbox.com/s/nokxa48kq0fgl69/851chikara-dzuyoku_kanaa-webfont.woff') format('woff'),
@@ -23,40 +30,228 @@
 	     url('https://dl.dropbox.com/s/hfxpythf123ib5j/RiiT_F.otf') format('otf');
 }
 
+:root {
+	--dark-green: #24292e;
+	--grey: #6a737d;
+	--white: #fff;
+	--red: #cb2431;
+	--blue: #0366d6;
+	--green: #28a745;
+	--violet: #6f42c1;
+	
+	--font-size: 12px;
+	--text-color: #FFA000;
+  
+	font-size: var(--font-size);
+  color: car(--text-color);
+  background: var(--dark-grey);
+}
 
+
+/**
+ * General Styles
+ */
+
+body:not(.foo) {     /*:not(.foo) increase priority*/
+	display: grid;
+  grid-template-columns: 32px 1fr 1fr 1fr;
+  grid-template-rows: auto;
+	grid-template-areas: 
+		"main-nav header header header"
+    "list list list list"
+    "footer footer footer footer";
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+	body:not(.foo) {
+		grid-template-areas: 
+			"main-nav main-nav main-nav main-nav"
+			"header header header header"
+			"list list list list"
+			"footer footer footer footer";
+	}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	body:not(.foo) {
+		grid-template-areas: 
+			"main-nav main-nav main-nav main-nav"
+			"header header header header"
+			"list list list list"
+			"footer footer footer footer";
+	}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	body:not(.foo) {
+		grid-template-areas: 
+			"main-nav main-nav main-nav main-nav"
+			"header header header header"
+			"list list list list"
+			"footer footer footer footer";
+	}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	body:not(.foo) {
+		grid-template-areas: 
+			"main-nav main-nav main-nav main-nav"
+			"header header header header"
+			"list list list list"
+			"footer footer footer footer";
+	}
+}
+
+/*
+ * Header
+ */
 .header {
-	height: 300px;
-	/*
-	background: url('https://dl.dropbox.com/s/7ybn1re6z90re4q/paper-texture.png') !important;!
-	*/
-	background: url('https://dl.dropbox.com/s/15pbx57uep9xvhq/paper-texture2.png') !important;!;
-	/*
-	background: url('https://dl.dropbox.com/s/lbnwqcqaiq592as/paper-texture3.png') !important;!*/
-	border: 6px solid #444;
+	grid-area: header;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: center;
+	padding-left: 12px;
+	padding-right: 12px;
+	background: var(--red);
+	/*background: url('https://dl.dropbox.com/s/7ybn1re6z90re4q/paper-texture.png');*/
+	/*background: url('https://dl.dropbox.com/s/15pbx57uep9xvhq/paper-texture2.png');*/
+	/*background: url('https://dl.dropbox.com/s/lbnwqcqaiq592as/paper-texture3.png');*/
 }
 
-.header-title {
-	display: none !important;;
+.header .header-title {
+	order: 1;
+	padding-right: 12px;
 }
 
-.header .header-menu .btn-menu {
-	font-family: "Rii";
-	text-transform: lowercase;
-	color: #444444;
+.header .header-menu {
+	order: 2;
 }
 
-.username {
-	font-family: "Chikara";
-	font-size: 10em;
-	text-transform: uppercase;
-	color: #FF5252 !important;;
+
+/**
+ * Menu
+ */
+.list-menu-float {
+	grid-area: main-nav;
+	display: flex;
+  flex-direction: column;
+	background: var(--green);
+}
+
+.list-menu-float::before {
+	content: '';
+	width: 32px;
+	height: 32px;
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDQ1OSA0NTkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ1OSA0NTk7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8ZyBpZD0ibWVudSI+CgkJPHBhdGggZD0iTTAsMzgyLjVoNDU5di01MUgwVjM4Mi41eiBNMCwyNTVoNDU5di01MUgwVjI1NXogTTAsNzYuNXY1MWg0NTl2LTUxSDB6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+}
+
+.list-menu-float:hover::before {
+	display: none;
+}
+
+.list-menu-float:hover {
+	width: 100vw;
+}
+
+.list-menu-float .icon-menu.profile,
+.list-menu-float .icon-menu.quick-add,
+.list-menu-float .icon-menu.anime-list,
+.list-menu-float .icon-menu.manga-list,
+.list-menu-float .icon-menu.history,
+.list-menu-float .icon-menu.export,
+.list-menu-float .icon-menu.logout,
+.list-menu-float .icon-menu.setting {
+	display: none;
+	margin: auto;
+}
+
+.list-menu-float:hover .icon-menu.profile,
+.list-menu-float:hover .icon-menu.quick-add,
+.list-menu-float:hover .icon-menu.anime-list,
+.list-menu-float:hover .icon-menu.manga-list,
+.list-menu-float:hover .icon-menu.history,
+.list-menu-float:hover .icon-menu.export,
+.list-menu-float:hover .icon-menu.logout,
+.list-menu-float:hover .icon-menu.setting {
+	display: block;
+}
+
+.list-menu-float .icon-menu.profile {
+	width: 64px;
+	height: 64px;
+	background-size: cover;
+}
+
+.list-menu-float .icon-menu.quick-add svg.icon-quick-add,
+.list-menu-float .icon-menu.anime-list svg.icon-anime-list,
+.list-menu-float .icon-menu.manga-list svg.icon-manga-list,
+.list-menu-float .icon-menu.history svg.icon-history,
+.list-menu-float .icon-menu.export svg.icon-export,
+.list-menu-float .icon-menu.logout svg.icon-logout,
+.list-menu-float .icon-menu.setting svg.icon-setting {
+	display: none;
+}
+
+.list-menu-float form {
+	margin: auto;
+}
+
+.list-menu-float .icon-menu.setting .text::before {
+	content: 'Settings';
+}
+
+.list-menu-float .icon-menu.setting:hover .text::before {
+	display: none;
+}
+
+.list-menu-float .icon-menu.setting .text .link-style-setting,
+.list-menu-float .icon-menu.setting .text .link-list-setting {
+	display: none;
+}
+
+.list-menu-float .icon-menu.setting:hover .text .link-style-setting,
+.list-menu-float .icon-menu.setting:hover .text .link-list-setting {
+	display: block;
+	text-align: center;
+}
+
+/**
+ * List Container
+ */
+.list-container {
+	grid-area: list;
+	background: var(--blue)
 }
 
 .cover-block {
 	display: none;
 }
 
-.list-status-title .text {
-	font-family: 'Rii' !important;
+@media (min-width: 768px) {
+	.cover-block {
+		display: block;
+	}
+	
+	.cover-block .image-container img {
+		width: 100vw;
+	}
 }
+
+
+/**
+ * Footer
+ */
+footer {
+	grid-area: footer;
+	background: var(--violet)
+}
+
+
+
 
